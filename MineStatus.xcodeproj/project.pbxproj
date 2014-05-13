@@ -66,6 +66,7 @@
 		0CF3B602192189B6006142F4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CF3B603192189B6006142F4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0CF3B60519219F15006142F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0CF3B60A19223C39006142F4 /* XCTest+Async.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		17F874C62F9448589DDD9EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EA9B14DFEF4B2C99D31F81 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +158,7 @@
 		0CF3B5E419217857006142F4 /* MineStatusTests */ = {
 			isa = PBXGroup;
 			children = (
+				0CF3B60A19223C39006142F4 /* XCTest+Async.h */,
 				0CF3B5EA19217857006142F4 /* MineStatusTests.m */,
 				0CF3B5E519217857006142F4 /* Supporting Files */,
 			);
