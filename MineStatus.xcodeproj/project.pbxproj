@@ -26,6 +26,7 @@
 		0CF3B604192189B6006142F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3B603192189B6006142F4 /* AppDelegate.m */; };
 		0CF3B60619219F15006142F4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CF3B60519219F15006142F4 /* Settings.bundle */; };
 		8C7CC85B0AF249D2BDD2B19D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F874C62F9448589DDD9EA2 /* libPods.a */; };
+		A50629B5F8534068A7C6D9D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F874C62F9448589DDD9EA2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 				0CF3B5DF19217857006142F4 /* XCTest.framework in Frameworks */,
 				0CF3B5E119217857006142F4 /* UIKit.framework in Frameworks */,
 				0CF3B5E019217857006142F4 /* Foundation.framework in Frameworks */,
+				A50629B5F8534068A7C6D9D8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +420,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -444,6 +447,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neurotopia Inc.";
 				ENABLE_NS_ASSERTIONS = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -486,6 +490,7 @@
 		};
 		0CF3B5F219217857006142F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EA9B14DFEF4B2C99D31F81 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MineStatus.app/MineStatus";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -504,6 +509,7 @@
 		};
 		0CF3B5F319217857006142F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EA9B14DFEF4B2C99D31F81 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MineStatus.app/MineStatus";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,6 +1,8 @@
 platform :ios, '7.0'
 inhibit_all_warnings!
 
+link_with 'MineStatus', 'MineStatusTests'
+
 pod 'CrashlyticsFramework', '~> 2.1'
 pod 'DNSKit', '= 0.0.1'
 
