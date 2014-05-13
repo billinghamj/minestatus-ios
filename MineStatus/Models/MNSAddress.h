@@ -19,4 +19,6 @@
 - (instancetype)initWithString:(NSString *)string;
 - (instancetype)initWithSRVRecord:(DNSSRVRecord *)record;
 
+- (void)resolveServer:(void (^)(MNSAddress *address))callback;
+
 @end

@@ -7,8 +7,10 @@
 //
 
 #import "MNSAddress.h"
+#import <DNSKit/DNSQuery.h>
 
 #define ValidationRegex @"^([A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,}))(\\:([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?$"
+#define DefaultMinecraftPort 25565
 
 @implementation MNSAddress
 
@@ -80,6 +82,40 @@
 		output = [output stringByAppendingFormat:@":%u", self.port];
 
 	return output;
+}
+
+- (void)resolveServer:(void (^)(MNSAddress *address))callback
+{
+	if (_port != 0)
+	{
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
+		{
+			callback(self);
+		});
+
+		return;
+	}
+
+	DNSQuery *query = [[DNSQuery alloc] init];
+	query.rrType = kDNSServiceType_SRV;
+	query.timeout = 2;
+
+	NSString *host = [@"_minecraft._tcp." stringByAppendingString:self.host];
+
+	[query searchWithName:host block:^(DNSResponse *response)
+	{
+		if (!response.records.count)
+		{
+			MNSAddress *address = self.copy;
+			address.port = DefaultMinecraftPort;
+			callback(address);
+			return;
+		}
+
+		DNSSRVRecord *record = response.records[0];
+		MNSAddress *address = [MNSAddress addressWithSRVRecord:record];
+		callback(address);
+	}];
 }
 
 @end
