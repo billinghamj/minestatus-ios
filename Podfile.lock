@@ -1,10 +1,13 @@
 PODS:
   - CrashlyticsFramework (2.1.9)
+  - DNSKit (0.0.1)
 
 DEPENDENCIES:
   - CrashlyticsFramework (~> 2.1)
+  - DNSKit (= 0.0.1)
 
 SPEC CHECKSUMS:
   CrashlyticsFramework: 9845d13f32b3aac73da9b53705289f8cd9b7d7e8
+  DNSKit: 8e1394abc2ac42ec7d4a343eba1562f15b79939d
 
 COCOAPODS: 0.32.1

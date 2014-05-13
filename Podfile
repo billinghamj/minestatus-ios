@@ -2,6 +2,7 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'CrashlyticsFramework', '~> 2.1'
+pod 'DNSKit', '= 0.0.1'
 
 post_install do |installer|
 
