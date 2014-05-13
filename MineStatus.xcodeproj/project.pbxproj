@@ -25,6 +25,7 @@
 		0CF3B6011921874A006142F4 /* MNSAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3B6001921874A006142F4 /* MNSAddress.m */; };
 		0CF3B604192189B6006142F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3B603192189B6006142F4 /* AppDelegate.m */; };
 		0CF3B60619219F15006142F4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CF3B60519219F15006142F4 /* Settings.bundle */; };
+		0CF3B60919222E76006142F4 /* MNSAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3B60819222E76006142F4 /* MNSAddressTests.m */; };
 		8C7CC85B0AF249D2BDD2B19D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F874C62F9448589DDD9EA2 /* libPods.a */; };
 		A50629B5F8534068A7C6D9D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F874C62F9448589DDD9EA2 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		0CF3B602192189B6006142F4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CF3B603192189B6006142F4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0CF3B60519219F15006142F4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0CF3B60819222E76006142F4 /* MNSAddressTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNSAddressTests.m; sourceTree = "<group>"; };
 		0CF3B60A19223C39006142F4 /* XCTest+Async.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTest+Async.h"; sourceTree = "<group>"; };
 		17F874C62F9448589DDD9EA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EA9B14DFEF4B2C99D31F81 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				0CF3B60A19223C39006142F4 /* XCTest+Async.h */,
 				0CF3B5EA19217857006142F4 /* MineStatusTests.m */,
+				0CF3B60819222E76006142F4 /* MNSAddressTests.m */,
 				0CF3B5E519217857006142F4 /* Supporting Files */,
 			);
 			path = MineStatusTests;
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF3B5EB19217857006142F4 /* MineStatusTests.m in Sources */,
+				0CF3B60919222E76006142F4 /* MNSAddressTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
