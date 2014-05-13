@@ -17,6 +17,11 @@
 	return [[MNSAddress alloc] initWithString:string];
 }
 
++ (instancetype)addressWithSRVRecord:(DNSSRVRecord *)record
+{
+	return [[MNSAddress alloc] initWithSRVRecord:record];
+}
+
 - (instancetype)initWithString:(NSString *)string
 {
 	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:ValidationRegex options:0 error:nil];
@@ -38,6 +43,17 @@
 			NSString *port = [string substringWithRange:portRange];
 			self.port = [port intValue];
 		}
+	}
+
+	return self;
+}
+
+- (instancetype)initWithSRVRecord:(DNSSRVRecord *)record
+{
+	if (self = [self init])
+	{
+		self.host = record.target;
+		self.port = record.port;
 	}
 
 	return self;
