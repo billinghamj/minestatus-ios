@@ -10,4 +10,17 @@
 
 @implementation MNSServer
 
+- (id)copyWithZone:(NSZone *)zone
+{
+	MNSServer *copy = [[MNSServer allocWithZone:zone] init];
+
+	if (copy)
+	{
+		copy.name = [self.name copyWithZone:zone];
+		copy.address = [self.address copyWithZone:zone];
+	}
+
+	return copy;
+}
+
 @end

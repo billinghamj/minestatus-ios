@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 James Billingham. All rights reserved.
 //
 
-@interface MNSAddress : NSObject
+@interface MNSAddress : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSString *host;
 @property (assign, nonatomic) uint16_t port;

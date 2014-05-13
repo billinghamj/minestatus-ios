@@ -43,6 +43,19 @@
 	return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+	MNSAddress *copy = [[MNSAddress allocWithZone:zone] init];
+
+	if (copy)
+	{
+		copy.host = [self.host copyWithZone:zone];
+		copy.port = self.port;
+	}
+
+	return copy;
+}
+
 - (NSString *)description
 {
 	NSString *output = self.host;

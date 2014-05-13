@@ -8,7 +8,7 @@
 
 #import "MNSAddress.h"
 
-@interface MNSServer : NSObject
+@interface MNSServer : NSObject <NSCopying>
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) MNSAddress *address;
