@@ -11,4 +11,8 @@
 @property (strong, nonatomic) NSString *host;
 @property (assign, nonatomic) uint16_t port;
 
++ (instancetype)addressWithString:(NSString *)string;
+
+- (instancetype)initWithString:(NSString *)string;
+
 @end
