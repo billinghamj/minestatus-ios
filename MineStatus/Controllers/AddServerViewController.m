@@ -27,9 +27,31 @@
 
 - (IBAction)done:(id)sender
 {
-	MNSAddress *address = [[MNSAddress alloc] init];
-	address.host = self.addressField.text;
-	address.port = 0;
+	if (!self.nameField.text.length)
+	{
+		[[[UIAlertView alloc]
+			initWithTitle:@"Invalid Name"
+			message:@"Please provide a name for the server"
+			delegate:nil
+			cancelButtonTitle:@"Okay"
+			otherButtonTitles:nil]
+		 show];
+		return;
+	}
+
+	MNSAddress *address = [MNSAddress addressWithString:self.addressField.text];
+
+	if (address == nil)
+	{
+		[[[UIAlertView alloc]
+			initWithTitle:@"Invalid Address"
+			message:@"The address you entered is not valid"
+			delegate:nil
+			cancelButtonTitle:@"Okay"
+			otherButtonTitles:nil]
+		 show];
+		return;
+	}
 
 	MNSServer *server = [[MNSServer alloc] init];
 	server.name = self.nameField.text;
