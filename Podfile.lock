@@ -1,12 +1,22 @@
 PODS:
+  - CocoaAsyncSocket (7.3.5)
+  - CocoaLumberjack (1.8.1):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.8.1)
+  - CocoaLumberjack/Extensions (1.8.1):
+    - CocoaLumberjack/Core
   - CrashlyticsFramework (2.1.9)
   - DNSKit (0.0.1)
 
 DEPENDENCIES:
+  - CocoaAsyncSocket (~> 7.3)
+  - CocoaLumberjack (~> 1.8)
   - CrashlyticsFramework (~> 2.1)
   - DNSKit (= 0.0.1)
 
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: a3b6de9958961578b36eabb8e921efd95b13d80c
+  CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
   CrashlyticsFramework: 9845d13f32b3aac73da9b53705289f8cd9b7d7e8
   DNSKit: 8e1394abc2ac42ec7d4a343eba1562f15b79939d
 

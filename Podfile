@@ -5,6 +5,8 @@ link_with 'MineStatus', 'MineStatusTests'
 
 pod 'CrashlyticsFramework', '~> 2.1'
 pod 'DNSKit', '= 0.0.1'
+pod 'CocoaAsyncSocket', '~> 7.3'
+pod 'CocoaLumberjack', '~> 1.8'
 
 post_install do |installer|
 
